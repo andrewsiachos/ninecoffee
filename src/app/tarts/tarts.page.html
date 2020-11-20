@@ -1,0 +1,24 @@
+
+<ion-header class="myHeader">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/home' text='Πίσω'></ion-back-button>
+    </ion-buttons>
+    <ion-title>Φυσικοί Χυμοί</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-slides [options]='slideOpts' class="ion-margin-top">
+    
+    <ion-slide *ngFor='let x of tartsItems'>
+      <div>
+        <img src={{x.imageUrl}} alt={{x.name}}>
+        <h3>{{x.name}}</h3>
+        <h4><span class="theSize">Τιμή:</span> {{x.price}} </h4>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

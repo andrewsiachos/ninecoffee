@@ -1,0 +1,84 @@
+<!--
+
+<ion-content [fullscreen]='true'>
+  
+
+
+  <div>
+    hello there
+  </div>
+    
+    <div *ngFor='let x of items'>
+      <ion-card routerLink="x.id">
+        <img src={{x.url}} alt="">
+        <ion-card-header>
+          <ion-card-subtitle>{{x.name}} </ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </div>
+  
+  <ion-grid>
+    
+    <ion-row>
+      <ion-col size-sm='8' offset-sm='2'>
+        <ion-grid class="ion-text-center">
+          <ion-row *ngFor='let x of items;let i = index'>
+            <ion-col size-md='4' *ngFor='let y of x; let j=index'>
+              <ion-card [routerLink]="['/', y.id]">
+                <img src={{y.url}} alt="">
+                <ion-card-header>
+                  <ion-card-subtitle>{{y.name}} </ion-card-subtitle>
+                </ion-card-header>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+</ion-content>
+
+
+
+<ion-footer class="ion-margin-top ion-text-center">
+  <ion-toolbar>
+    <ion-title>
+      Copyright Εννέα Street Coffee
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+-->
+
+
+<ion-content>
+  <div id='wrapper'>
+    <div id='gridContainer'>
+      <div *ngFor='let x of categories'>
+        <ion-card [routerLink]="['/', x.id]">
+          <img src={{x.url}} alt="">
+          <ion-card-header>
+            <ion-card-subtitle>{{x.name}} </ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-text-center">
+  <ion-toolbar>
+    <ion-title>
+      Copyright Εννέα Street Coffee
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
+

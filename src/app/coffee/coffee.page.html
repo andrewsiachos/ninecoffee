@@ -1,0 +1,26 @@
+<ion-header class="myHeader">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/home' text='Πίσω'></ion-back-button>
+    </ion-buttons>
+    <ion-title>Καφέδες</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="itemContainer">
+    <ion-slides [options]='slideOpts' class="ion-margin-top">
+      <ion-slide *ngFor='let x of coffeItems'>
+        <div>
+          <img src={{x.imageUrl}} alt={{x.name}}>
+          <h3>{{x.name}} </h3>
+          <ul>
+            <li *ngFor='let y of x.sizes'> <span class="theSize">{{y.size}}:</span> {{y.price}} </li>
+          </ul>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  
+</ion-content>

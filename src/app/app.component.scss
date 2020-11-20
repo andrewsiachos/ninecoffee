@@ -1,0 +1,18 @@
+ion-header{
+    display:flex;
+    color:white;
+    justify-content: center;
+    background-color: #121212;
+}
+ion-header > div{
+    background-color: #fff200;
+    height:25%;
+    position: relative;
+    top:40%;
+    width:100%;
+}
+#logo{
+    width:100px;
+    height:100px;
+}
+
